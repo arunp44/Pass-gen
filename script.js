@@ -3,7 +3,15 @@ var password=document.getElementById("password");
 
  function generatePassword() {
     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var passwordLength = 12;
+    let pass = prompt("Enter password lenght (8-128)", "Password");
+    let text;
+    if (pass == null || pass == "") {
+      text = "User cancelled the prompt.";
+    } else {
+      text = "pass length";
+    }
+    var passwordLength = pass;
+    //var passwordLength = 12;
     var password = "";
  for (var i = 0; i <= passwordLength; i++) {
    var randomNumber = Math.floor(Math.random() * chars.length);
