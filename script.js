@@ -3,7 +3,11 @@ var password=document.getElementById("password");
 
  function generatePassword() {
     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let pass = prompt("Enter password lenght (8-128)", "Password");
+    let pass = 7;
+    while (pass < 8) {
+      pass = prompt("Enter password lenght (8-128)", "Password")
+    }
+    ;
     let text;
     if (pass == null || pass == "") {
       text = "User cancelled the prompt.";
